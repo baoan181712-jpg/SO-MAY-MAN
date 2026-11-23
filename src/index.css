@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "SVN-Gilroy", "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --color-brand-blue: #0057A0;
+  --color-brand-blue-dark: #003F75;
+  --color-brand-sky: #0089CF;
+  --color-brand-ice: #EDF4FA;
+  --color-brand-red: #D71920;
+  --color-brand-red-dark: #B01218;
+  --color-ink: #0F243E;
+  --color-ink-muted: #51647A;
+  --color-canvas: #F7F9FC;
+  --color-line: #DDE6F0;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    background-color: var(--color-canvas);
+  }
+
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom scrollbar for desktop banking workbench */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C7D6E6;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9DB5CE;
+}
+
+/* Print / PDF Consultation Sheet Rules */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 14mm 14mm 16mm 14mm;
+  }
+
+  body {
+    background: #FFFFFF !important;
+    color: #0F243E !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .print-sheet {
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .avoid-break {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}

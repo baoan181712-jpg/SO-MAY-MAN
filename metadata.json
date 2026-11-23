@@ -1,0 +1,6 @@
+{
+  "name": "Lucky Number Bank – Trợ lý tư vấn số tài khoản cá nhân hóa",
+  "description": "Ứng dụng hỗ trợ giao dịch viên ngân hàng phân tích thần số học Pythagoras, ý nghĩa số phương Đông, chấm điểm đề xuất số tài khoản đẹp và tạo kịch bản tư vấn bán hàng chuyên nghiệp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
